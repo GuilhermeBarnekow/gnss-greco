@@ -46,8 +46,8 @@ class GPSWidget(Widget):
         self.logger = logging.getLogger('GSS.GPSWidget')
         self.simulation_mode = False
         try:
-            self.gnss = GNSSModule(port=None, baudrate=115200, simulation=True)
-            self.logger.info("GNSS module initialized in simulation mode successfully")
+            self.gnss = GNSSModule(port=None, baudrate=115200, simulation=False)
+            self.logger.info("GNSS module initialized in real mode successfully")
         except Exception as e:
             self.logger.error(f"Failed to initialize GNSS module: {e}")
             # Set status to red to indicate error

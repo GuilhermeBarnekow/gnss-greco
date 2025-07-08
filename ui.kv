@@ -95,19 +95,25 @@
                 multiline: False
                 focus: False
                 on_focus: root.show_keyboard(self, self.focus)
-                size_hint_x: 0.6
+                size_hint_x: 0.5
                 font_size: '16sp'
 
             Button:
                 text: 'Enter'
-                size_hint_x: 0.2
+                size_hint_x: 0.15
                 font_size: '16sp'
                 on_press: root.on_text_entered(input_field.text)
 
             Button:
                 text: 'Toggle Mode'
-                size_hint_x: 0.2
+                size_hint_x: 0.15
                 font_size: '16sp'
                 on_press: root.toggle_mode()
+
+            Button:
+                text: 'Sair'
+                size_hint_x: 0.2
+                font_size: '16sp'
+                on_press: app.stop()
 
     # Placeholder for tractor sprites and other UI elements
